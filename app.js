@@ -176,7 +176,11 @@ if (checkboxes.length) {
         lines.push(group.querySelector('.checklist-group-title').textContent);
         group.querySelectorAll('.checklist-item').forEach(function(item) {
           var cb = item.querySelector('input');
-          lines.push((cb.checked ? '[x] ' : '[ ] ') + item.querySelector('span').textContent.trim());
+          var span = item.querySelector('span');
+          var text = Array.from(span.childNodes).map(function(n) {
+            return n.nodeName === 'A' ? n.textContent + ' (' + n.href + ')' : n.textContent;
+          }).join('').trim();
+          lines.push((cb.checked ? '[x] ' : '[ ] ') + text);
         });
         lines.push('');
       });
