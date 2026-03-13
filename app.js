@@ -25,6 +25,54 @@ document.addEventListener('click', function (e) {
   if (!e.target.closest('.sidebar') && !e.target.closest('.menu-toggle')) closeSidebar();
 });
 
+var sidebar = document.querySelector('.sidebar');
+
+document.querySelectorAll('.sidebar .nav-item').forEach(function(link) {
+  link.addEventListener('click', function(e) {
+    if (!document.body.classList.contains('sidebar-open')) return;
+    var href = link.getAttribute('href');
+    if (!href) return;
+    e.preventDefault();
+    closeSidebar();
+    function onDone() {
+      sidebar.removeEventListener('transitionend', onDone);
+      window.location.href = href;
+    }
+    sidebar.addEventListener('transitionend', onDone);
+  });
+});
+
+// Collapsible sub-items under parent nav items
+document.querySelectorAll('.nav-item:not(.nav-sub)').forEach(function(item) {
+  var subs = [];
+  var next = item.nextElementSibling;
+  while (next && next.classList.contains('nav-sub')) {
+    subs.push(next);
+    next = next.nextElementSibling;
+  }
+  if (subs.length === 0) return;
+
+  item.classList.add('has-subs');
+
+  var anyActive = item.classList.contains('active') || subs.some(function(s) { return s.classList.contains('active'); });
+  if (!anyActive) {
+    item.classList.add('subs-collapsed');
+    subs.forEach(function(s) { s.style.display = 'none'; });
+  }
+
+  var arrow = document.createElement('span');
+  arrow.className = 'nav-toggle-arrow';
+  arrow.textContent = '›';
+  item.appendChild(arrow);
+
+  arrow.addEventListener('click', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    var collapsed = item.classList.toggle('subs-collapsed');
+    subs.forEach(function(s) { s.style.display = collapsed ? 'none' : ''; });
+  });
+});
+
 // Info tips — bottom sheet
 var sheet = document.querySelector('.tip-sheet');
 var sheetContent = document.querySelector('.tip-sheet-content');
