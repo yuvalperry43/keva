@@ -35,8 +35,8 @@ fontToggleBtn.textContent = 'Aa';
 var header = document.querySelector('.mobile-header');
 if (header) {
   header.appendChild(fontPopover);
-  header.appendChild(darkToggle);
   header.appendChild(fontToggleBtn);
+  header.appendChild(darkToggle);
 }
 
 fontToggleBtn.addEventListener('click', function(e) {
