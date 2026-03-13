@@ -140,6 +140,36 @@ document.getElementById('font-up').addEventListener('click', function () {
   }
 });
 
+// Contact form — AJAX submit + clear
+function showToast(msg) {
+  var t = document.createElement('div');
+  t.textContent = msg;
+  t.style.cssText = 'position:fixed;bottom:2rem;left:50%;transform:translateX(-50%);background:#1a1a18;color:#fff;padding:0.6rem 1.25rem;border-radius:8px;font-size:0.875rem;z-index:9999;opacity:1;transition:opacity 0.4s';
+  document.body.appendChild(t);
+  setTimeout(function() { t.style.opacity = '0'; setTimeout(function() { t.remove(); }, 400); }, 2500);
+}
+
+var contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    fetch(contactForm.action, {
+      method: 'POST',
+      body: new FormData(contactForm),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(res) {
+      if (res.ok) {
+        contactForm.reset();
+        showToast('תודה על הפידבק!');
+      } else {
+        showToast('שגיאה, נסו שוב');
+      }
+    }).catch(function() {
+      showToast('שגיאה, נסו שוב');
+    });
+  });
+}
+
 document.getElementById('font-down').addEventListener('click', function () {
   if (idx > 0) {
     idx--;
