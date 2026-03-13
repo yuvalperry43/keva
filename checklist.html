@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>צ'ק ליסט - כלכלה בקבע</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="mobile-header">
+<button class="menu-toggle" aria-label="תפריט"><svg class="menu-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><rect x="2" y="4" width="16" height="2" rx="1"/><rect x="2" y="9" width="16" height="2" rx="1"/><rect x="2" y="14" width="16" height="2" rx="1"/></svg></button>
+<span class="site-name">כלכלה בקבע</span>
+<div class="font-controls"><button class="font-btn" id="font-down">&minus;</button><button class="font-btn" id="font-up">+</button></div>
+</header>
+<div class="layout">
+<nav class="sidebar">
+<div class="sidebar-logo"><a href="index.html">כלכלה בקבע<span>האוגדן הפיננסי לחייל הקבע</span></a></div>
+
+<div class="nav-section"><div class="nav-section-title">הכסף היומיומי</div>
+<a class="nav-item" href="talush-sachar.html">תלוש שכר</a>
+<a class="nav-item" href="heshbon-bank.html">חשבון בנק</a>
+<a class="nav-item nav-sub" href="keren-kaspit.html">קרן כספית</a>
+<a class="nav-item nav-sub" href="bank-otzar.html">בנק אוצר החייל</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">השקעות וחיסכון</div>
+<a class="nav-item" href="shuk-haon.html">שוק ההון</a>
+<a class="nav-item" href="mutzrei-hisachon.html">מוצרי חיסכון פנסיוניים</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">ביטוחים</div>
+<a class="nav-item" href="bituahim.html">ביטוחים</a>
+<a class="nav-item nav-sub" href="bituah-haim.html">למה ביטלתי את ביטוח החיים</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">הטבות וזכויות</div>
+<a class="nav-item" href="moadon-haver.html">מועדון חבר</a>
+<a class="nav-item" href="nekudot.html">נקודות</a>
+<a class="nav-item" href="cellcom.html">סלקום</a>
+<a class="nav-item" href="halat.html">חל"ת</a>
+</div>
+<div class="nav-section"><div class="nav-section-title">בונוס</div>
+<a class="nav-item" href="tipim.html">טיפים כלליים</a>
+<a class="nav-item" href="checklist.html">צ'ק ליסט</a>
+<a class="nav-item" href="maavar-lamerkaz.html">מעבר למרכז</a>
+</div>
+</nav>
+
+<main class="main">
+<h1>צ'ק ליסט</h1>
+<p class="page-subtitle">כל המשימות הפרקטיות במקום אחד</p>
+
+<button class="share-btn" id="share-btn">שתף / העתק</button>
+
+<div class="checklist">
+
+<div class="checklist-group">
+<div class="checklist-group-title">הכסף היומיומי</div>
+<label class="checklist-item"><input type="checkbox" data-id="c1"><span>לקרוא ולהבין את תלוש השכר</span></label>
+<label class="checklist-item"><input type="checkbox" data-id="c2"><span>לפתוח קרן כספית לכסף שיושב בעו"ש</span></label>
+<label class="checklist-item"><input type="checkbox" data-id="c3"><span>לבדוק אם כדאי לפתוח חשבון באוצר החייל ולממש מתנת הצטרפות (3,400 ש"ח)</span></label>
+</div>
+
+<div class="checklist-group">
+<div class="checklist-group-title">השקעות וחיסכון</div>
+<label class="checklist-item"><input type="checkbox" data-id="c4"><span>להיכנס ל<a href="https://itur.mof.gov.il" target="_blank">הר הכסף</a> ולמפות את כל החסכונות הפנסיוניים</span></label>
+<label class="checklist-item"><input type="checkbox" data-id="c5"><span>להעביר את הפנסיה למסלול מנייתי</span></label>
+<label class="checklist-item"><input type="checkbox" data-id="c6"><span>לבטל קצבת שארים אם אין ילדים</span></label>
+<label class="checklist-item"><input type="checkbox" data-id="c7"><span>לבדוק את חיסכון לכל ילד ולהעביר לקופת גמל מחקה מדד (אחרי גיל 21)</span></label>
+</div>
+
+<div class="checklist-group">
+<div class="checklist-group-title">ביטוחים</div>
+<label class="checklist-item"><input type="checkbox" data-id="c8"><span>להיכנס ל<a href="https://hit.cma.gov.il/" target="_blank">הר הביטוח</a> ולמפות ביטוחים קיימים</span></label>
+<label class="checklist-item"><input type="checkbox" data-id="c9"><span>לבדוק אם מכוסים דרך ביטוח הבריאות של ההורים ולבטל את הפוליסה הצבאית בהתאם</span></label>
+<label class="checklist-item"><input type="checkbox" data-id="c9b"><span>לבדוק אם יש כפל ביטוחים (בריאות / חיים)</span></label>
+<label class="checklist-item"><input type="checkbox" data-id="c10"><span>להחליט אם לשמור / להחליף / לבטל את ביטוח החיים של איילון</span></label>
+</div>
+
+<div class="checklist-group">
+<div class="checklist-group-title">הטבות וזכויות</div>
+<label class="checklist-item"><input type="checkbox" data-id="c11"><span>להצטרף למועדון חבר</span></label>
+<label class="checklist-item"><input type="checkbox" data-id="c12"><span>להגדיל מסגרת כרטיס חבר לפני חודש בונוס</span></label>
+<label class="checklist-item"><input type="checkbox" data-id="c13"><span>לבדוק יתרת נקודות ב<a href="https://idfpoints.mltp.co.il/" target="_blank">אתר הנקודות</a></span></label>
+<label class="checklist-item"><input type="checkbox" data-id="c14"><span>לעדכן חבילת סלקום להטבת הקבע</span></label>
+</div>
+
+</div>
+
+<div class="bottom-nav"><span></span><a href="tipim.html">טיפים כלליים →</a></div>
+</main>
+</div>
+<div class="tip-sheet"><div class="tip-sheet-content"></div></div>
+<script src="app.js"></script>
+</body>
+</html>

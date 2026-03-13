@@ -89,6 +89,44 @@ sheet.addEventListener('click', function (e) {
   if (!e.target.closest('.tip-sheet-content')) sheet.classList.remove('open');
 });
 
+// Checklist
+var checkboxes = document.querySelectorAll('.checklist-item input[type="checkbox"]');
+if (checkboxes.length) {
+  var saved = JSON.parse(localStorage.getItem('checklist') || '{}');
+  checkboxes.forEach(function(cb) {
+    if (saved[cb.dataset.id]) { cb.checked = true; cb.closest('.checklist-item').classList.add('done'); }
+    cb.addEventListener('change', function() {
+      cb.closest('.checklist-item').classList.toggle('done', cb.checked);
+      saved[cb.dataset.id] = cb.checked;
+      localStorage.setItem('checklist', JSON.stringify(saved));
+    });
+  });
+
+  var shareBtn = document.getElementById('share-btn');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', function() {
+      var lines = ['כלכלה בקבע - צ\'ק ליסט', ''];
+      document.querySelectorAll('.checklist-group').forEach(function(group) {
+        lines.push(group.querySelector('.checklist-group-title').textContent);
+        group.querySelectorAll('.checklist-item').forEach(function(item) {
+          var cb = item.querySelector('input');
+          lines.push((cb.checked ? '[x] ' : '[ ] ') + item.querySelector('span').textContent.trim());
+        });
+        lines.push('');
+      });
+      var text = lines.join('\n');
+      if (navigator.share) {
+        navigator.share({ title: 'כלכלה בקבע - צ\'ק ליסט', text: text });
+      } else {
+        navigator.clipboard.writeText(text).then(function() {
+          shareBtn.textContent = 'הועתק!';
+          setTimeout(function() { shareBtn.textContent = 'שתף / העתק'; }, 2000);
+        });
+      }
+    });
+  }
+}
+
 // Font size — scales everything via html root font size
 var sizes = [8, 10, 12, 14, 16, 18, 21, 24, 28];
 var idx = parseInt(localStorage.getItem('fontSize') || '4');
