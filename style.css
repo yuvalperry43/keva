@@ -14,6 +14,91 @@
   --menu-btn-size: 44px;
 }
 
+html.dark {
+  --bg: #111110;
+  --surface: #1c1c1a;
+  --border: #2e2e2b;
+  --text: #edeae4;
+  --muted: #888580;
+  --accent: #5b8ef5;
+  --accent-light: #1a2540;
+}
+
+html.dark .callout {
+  color: #93b4f8;
+}
+
+.theme-btn, .dark-toggle, .font-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  color: var(--muted);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.dark-toggle {
+  width: 36px;
+  height: 40px;
+  opacity: 0.7;
+}
+.dark-toggle:hover { opacity: 1; }
+.font-toggle-btn {
+  height: 40px;
+  padding: 0 8px;
+  font-size: 0.8rem;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  letter-spacing: 0.02em;
+  opacity: 0.7;
+  margin-right: auto;
+}
+.font-toggle-btn:hover { opacity: 1; }
+.font-popover {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0.75rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 0.5rem;
+  gap: 0.25rem;
+  z-index: calc(var(--sidebar-z) + 1);
+}
+.font-popover.open { display: flex; }
+.font-popover button {
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--text);
+  cursor: pointer;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.font-popover button:hover { background: var(--bg); }
+.theme-btn-sidebar {
+  display: none;
+  margin-top: 0.75rem;
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  opacity: 0.7;
+  padding: 0;
+}
+.theme-btn-sidebar:hover { opacity: 1; }
+@media (min-width: 901px) {
+  .theme-btn-sidebar { display: flex; }
+  .mobile-header .dark-toggle,
+  .mobile-header .font-toggle-btn { display: none; }
+}
+
 body {
   font-family: 'Noto Sans Hebrew', 'Arial Hebrew', Arial, sans-serif;
   background: var(--bg);
@@ -97,32 +182,6 @@ a:hover { text-decoration: underline; }
     cursor: pointer;
     flex-shrink: 0;
   }
-  .site-name {
-    flex: 1;
-    font-size: 15px;
-    font-weight: 700;
-    color: var(--text);
-    text-align: center;
-  }
-  .font-controls {
-    display: flex;
-    gap: 0.25rem;
-    flex-shrink: 0;
-  }
-  .font-btn {
-    background: none;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 4px 11px;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 1;
-    color: var(--text);
-    cursor: pointer;
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-    direction: ltr;
-  }
-
   /* Sidebar drawer */
   .sidebar {
     width: var(--sidebar-mobile-width);
