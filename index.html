@@ -3,15 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>כלכלה בקבע — כלכלה בקבע</title>
+<title>כלכלה בקבע - כלכלה בקבע</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<button class="menu-toggle" aria-label="תפריט" onclick="document.body.classList.toggle('sidebar-open')">
-  <span class="menu-icon">☰</span>
-</button>
+<header class="mobile-header">
+<button class="menu-toggle" aria-label="תפריט"><svg class="menu-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><rect x="2" y="4" width="16" height="2" rx="1"/><rect x="2" y="9" width="16" height="2" rx="1"/><rect x="2" y="14" width="16" height="2" rx="1"/></svg></button>
+<span class="site-name">כלכלה בקבע</span>
+<div class="font-controls"><button class="font-btn" id="font-down">&minus;</button><button class="font-btn" id="font-up">+</button></div>
+</header>
 <div class="layout">
 <nav class="sidebar">
 <div class="sidebar-logo"><a href="index.html">כלכלה בקבע<span>המדריך לחייל הקבע</span></a></div>
@@ -20,6 +22,7 @@
 <a class="nav-item" href="talush-sachar.html">תלוש שכר</a>
 <a class="nav-item" href="heshbon-bank.html">חשבון בנק</a>
 <a class="nav-item nav-sub" href="keren-kaspit.html">קרן כספית</a>
+<a class="nav-item nav-sub" href="bank-otzar.html">בנק אוצר החייל</a>
 </div>
 <div class="nav-section"><div class="nav-section-title">השקעות וחיסכון</div>
 <a class="nav-item" href="shuk-haon.html">שוק ההון</a>
@@ -34,7 +37,6 @@
 <a class="nav-item" href="nekudot.html">נקודות</a>
 <a class="nav-item" href="cellcom.html">סלקום</a>
 <a class="nav-item" href="halat.html">חל"ת</a>
-<a class="nav-item" href="bank-otzar.html">בנק אוצר החייל</a>
 </div>
 <div class="nav-section"><div class="nav-section-title">בונוס</div>
 <a class="nav-item" href="tipim.html">טיפים כלליים</a>
@@ -48,7 +50,7 @@
 <p class="page-subtitle">המדריך הפיננסי לחייל הנכנס לקבע</p>
 
 <div class="callout">
-  אם אתם לא יודעים מאיפה להתחיל — התחילו עם <a href="moadon-haver.html">מועדון חבר</a> ו<a href="bank-otzar.html">בנק אוצר החייל</a>. שם נמצא הכסף הכי קל לתפוס.
+  אם אתם לא יודעים מאיפה להתחיל - התחילו עם <a href="moadon-haver.html">מועדון חבר</a> ו<a href="bank-otzar.html">בנק אוצר החייל</a>. שם נמצא הכסף הכי קל לתפוס.
 </div>
 
 <h2>הכסף היומיומי</h2>
@@ -68,12 +70,14 @@
 <div class="card-grid">
   <a class="card" href="moadon-haver.html"><div class="card-title">מועדון חבר</div><div class="card-desc">המועדון המשתלם במדינה</div></a>
   <a class="card" href="nekudot.html"><div class="card-title">נקודות</div><div class="card-desc">מדים, ספורשיות וכספ"ר</div></a>
-  <a class="card" href="cellcom.html"><div class="card-title">סלקום</div><div class="card-desc">500GB חינם + חו"ל בשקל</div></a>
-  <a class="card" href="bank-otzar.html"><div class="card-title">אוצר החייל</div><div class="card-desc">3,400 ש"ח מתנת הצטרפות</div></a>
+  <a class="card" href="cellcom.html"><div class="card-title">סלקום</div><div class="card-desc">500GB חינם + חו"ל ב1 ש"ח</div></a>
+  <a class="card" href="bank-otzar.html"><div class="card-title">אוצר החייל</div><div class="card-desc">שווה לפתוח חשבון</div></a>
 </div>
 
 <div class="bottom-nav"><a href="talush-sachar.html">← תלוש שכר</a><span></span></div>
 </main>
 </div>
+<div class="tip-sheet"><div class="tip-sheet-content"></div></div>
+<script src="app.js"></script>
 </body>
 </html>

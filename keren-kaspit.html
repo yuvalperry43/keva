@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>קרן כספית — כלכלה בקבע</title>
+<title>קרן כספית - כלכלה בקבע</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="mobile-header">
+<button class="menu-toggle" aria-label="תפריט"><svg class="menu-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><rect x="2" y="4" width="16" height="2" rx="1"/><rect x="2" y="9" width="16" height="2" rx="1"/><rect x="2" y="14" width="16" height="2" rx="1"/></svg></button>
+<span class="site-name">כלכלה בקבע</span>
+<div class="font-controls"><button class="font-btn" id="font-down">&minus;</button><button class="font-btn" id="font-up">+</button></div>
+</header>
 <div class="layout">
 <nav class="sidebar">
 <div class="sidebar-logo"><a href="index.html">כלכלה בקבע<span>המדריך לחייל הקבע</span></a></div>
@@ -31,7 +36,6 @@
 <a class="nav-item" href="nekudot.html">נקודות</a>
 <a class="nav-item" href="cellcom.html">סלקום</a>
 <a class="nav-item" href="halat.html">חל"ת</a>
-<a class="nav-item" href="bank-otzar.html">בנק אוצר החייל</a>
 </div>
 <div class="nav-section"><div class="nav-section-title">בונוס</div>
 <a class="nav-item" href="tipim.html">טיפים כלליים</a>
@@ -40,7 +44,7 @@
 </nav>
 
 <main class="main">
-<div style="font-size:12px;color:var(--muted);margin-bottom:0.5rem">הכסף היומיומי</div>
+<div style="font-size:0.75rem;color:var(--muted);margin-bottom:0.5rem">הכסף היומיומי</div>
 <h1>קרן כספית</h1>
 <p class="page-subtitle">מה לעשות עם כסף שיושב בעו"ש</p>
 
@@ -49,15 +53,15 @@
 <p>הקרן צפויה לעשות בקירוב תשואה שנתית של ריבית בנק ישראל (כיום ~4%).</p>
 
 <div class="callout">
-  אם יושב לכם 30,000 ש"ח בעו"ש — תוך חודש יש שם ~100 ש"ח יותר. לא הון עתק, אבל בהחלט עדיף על כלום.
+  אם יושב לכם 30,000 ש"ח בעו"ש - תוך חודש יש שם ~100 ש"ח יותר. לא הון עתק, אבל בהחלט עדיף על כלום.
 </div>
 
 <h2>איפה קונים?</h2>
-<p>בבנק — על פי חוק לבנקים אסור לגבות דמי ניהול ועמלות קנייה ומכירה על קרנות כספיות.</p>
+<p>בבנק - על פי חוק לבנקים אסור לגבות דמי ניהול ועמלות קנייה ומכירה על קרנות כספיות.</p>
 <p>בחרו קרן שלא נוצרה אתמול, עם מספיק נכסים ודמי ניהול נמוכים.</p>
 <ul>
-  <li><a href="https://www.funder.co.il/kaspit" target="_blank">רשימת כל הקרנות הכספיות — funder.co.il</a></li>
-  <li><a href="https://lazyinvestor.co.il/monetary-fund/" target="_blank">מדריך מורחב — lazyinvestor.co.il</a></li>
+  <li><a href="https://www.funder.co.il/kaspit" target="_blank">רשימת כל הקרנות הכספיות - funder.co.il</a></li>
+  <li><a href="https://lazyinvestor.co.il/monetary-fund/" target="_blank">מדריך מורחב - lazyinvestor.co.il</a></li>
 </ul>
 
 <h2>מיסים</h2>
@@ -67,10 +71,12 @@
 <p>רוצים את הכסף חזרה? מוכרים, ובאותו יום או יום אחד הכסף חוזר לחשבון.</p>
 
 <h2>שורה תחתונה</h2>
-<p>אל תשאירו כסף מת בעו"ש. זה הצעד הכי קל ופשוט לגרום לכסף לעבוד — בלי סיכון, בלי נעילה, בלי מאמץ.</p>
+<p>אל תשאירו כסף מת בעו"ש. זה הצעד הכי קל ופשוט לגרום לכסף לעבוד - בלי סיכון, בלי נעילה, בלי מאמץ.</p>
 
 <div class="bottom-nav"><a href="shuk-haon.html">← שוק ההון</a><a href="heshbon-bank.html">חשבון בנק →</a></div>
 </main>
 </div>
+<div class="tip-sheet"><div class="tip-sheet-content"></div></div>
+<script src="app.js"></script>
 </body>
 </html>

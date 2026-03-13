@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>סלקום — כלכלה בקבע</title>
+<title>סלקום - כלכלה בקבע</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="mobile-header">
+<button class="menu-toggle" aria-label="תפריט"><svg class="menu-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><rect x="2" y="4" width="16" height="2" rx="1"/><rect x="2" y="9" width="16" height="2" rx="1"/><rect x="2" y="14" width="16" height="2" rx="1"/></svg></button>
+<span class="site-name">כלכלה בקבע</span>
+<div class="font-controls"><button class="font-btn" id="font-down">&minus;</button><button class="font-btn" id="font-up">+</button></div>
+</header>
 <div class="layout">
 <nav class="sidebar">
 <div class="sidebar-logo"><a href="index.html">כלכלה בקבע<span>המדריך לחייל הקבע</span></a></div>
@@ -17,6 +22,7 @@
 <a class="nav-item" href="talush-sachar.html">תלוש שכר</a>
 <a class="nav-item" href="heshbon-bank.html">חשבון בנק</a>
 <a class="nav-item nav-sub" href="keren-kaspit.html">קרן כספית</a>
+<a class="nav-item nav-sub" href="bank-otzar.html">בנק אוצר החייל</a>
 </div>
 <div class="nav-section"><div class="nav-section-title">השקעות וחיסכון</div>
 <a class="nav-item" href="shuk-haon.html">שוק ההון</a>
@@ -31,7 +37,6 @@
 <a class="nav-item" href="nekudot.html">נקודות</a>
 <a class="nav-item active" href="cellcom.html">סלקום</a>
 <a class="nav-item" href="halat.html">חל"ת</a>
-<a class="nav-item" href="bank-otzar.html">בנק אוצר החייל</a>
 </div>
 <div class="nav-section"><div class="nav-section-title">בונוס</div>
 <a class="nav-item" href="tipim.html">טיפים כלליים</a>
@@ -40,20 +45,22 @@
 </nav>
 
 <main class="main">
-<div style="font-size:12px;color:var(--muted);margin-bottom:0.5rem">הטבות וזכויות</div>
+<div style="font-size:0.75rem;color:var(--muted);margin-bottom:0.5rem">הטבות וזכויות</div>
 <h1>סלקום</h1>
-<p class="page-subtitle">500GB חינם + חו"ל בשקל</p>
+<p class="page-subtitle">500GB חינם + חו"ל ב1 ש"ח</p>
 
 
 <p>חבילת סלולר חינמית של סלקום על 500GB בחודש.</p>
-<div class="callout">הערך האמיתי מתגלה בחו"ל — 50GB לחודש בשקל בודד!</div>
+<div class="callout">הערך האמיתי מתגלה בחו"ל - 50GB לחודש בשקל בודד!</div>
 <p>כל הפרטים ודרכי ההצטרפות ב<a href="https://www.idf.il/%D7%90%D7%AA%D7%A8%D7%99-%D7%99%D7%97%D7%99%D7%93%D7%95%D7%AA/%D7%90%D7%92%D7%A3-%D7%94%D7%AA%D7%A7%D7%A9%D7%95%D7%91-%D7%95%D7%94%D7%94%D7%92%D7%A0%D7%94-%D7%91%D7%A1%D7%99%D7%99%D7%91%D7%A8/%D7%9B%D7%9C-%D7%94%D7%9B%D7%AA%D7%91%D7%95%D7%AA/2018/%D7%97%D7%91%D7%99%D7%9C%D7%95%D7%AA-%D7%A1%D7%9C%D7%95%D7%9C%D7%90%D7%A8-%D7%9C%D7%90%D7%A0%D7%A9%D7%99-%D7%A7%D7%91%D7%A2/" target="_blank">אתר צה"ל</a>. ניתן לבצע ניוד או לקחת מספר חדש.</p>
 
-<h2>בונוס — אינטרנט חינם לדירה</h2>
-<p>אם יש לכם חבילה משפחתית ולא רוצים לעבור לסלקום — קחו את הסים על מספר חדש, ובאמצעות ראוטר סלולרי תשיגו אינטרנט חינם לדירה.</p>
+<h2>בונוס - אינטרנט חינם לדירה</h2>
+<p>אם יש לכם חבילה משפחתית ולא רוצים לעבור לסלקום - קחו את הסים על מספר חדש, ובאמצעות <a href="https://www.ivory.co.il/catalog.php?act=cat&id=2616&catsFilters=&f=7857&orderBy=priceLow" target="_blank">ראוטר סלולרי</a> תשיגו אינטרנט חינם לדירה.</p>
 
 <div class="bottom-nav"><a href="halat.html">← חל"ת</a><a href="nekudot.html">נקודות →</a></div>
 </main>
 </div>
+<div class="tip-sheet"><div class="tip-sheet-content"></div></div>
+<script src="app.js"></script>
 </body>
 </html>

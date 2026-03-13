@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>בנק אוצר החייל — כלכלה בקבע</title>
+<title>בנק אוצר החייל - כלכלה בקבע</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="mobile-header">
+<button class="menu-toggle" aria-label="תפריט"><svg class="menu-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><rect x="2" y="4" width="16" height="2" rx="1"/><rect x="2" y="9" width="16" height="2" rx="1"/><rect x="2" y="14" width="16" height="2" rx="1"/></svg></button>
+<span class="site-name">כלכלה בקבע</span>
+<div class="font-controls"><button class="font-btn" id="font-down">&minus;</button><button class="font-btn" id="font-up">+</button></div>
+</header>
 <div class="layout">
 <nav class="sidebar">
 <div class="sidebar-logo"><a href="index.html">כלכלה בקבע<span>המדריך לחייל הקבע</span></a></div>
@@ -17,6 +22,7 @@
 <a class="nav-item" href="talush-sachar.html">תלוש שכר</a>
 <a class="nav-item" href="heshbon-bank.html">חשבון בנק</a>
 <a class="nav-item nav-sub" href="keren-kaspit.html">קרן כספית</a>
+<a class="nav-item nav-sub" href="bank-otzar.html">בנק אוצר החייל</a>
 </div>
 <div class="nav-section"><div class="nav-section-title">השקעות וחיסכון</div>
 <a class="nav-item" href="shuk-haon.html">שוק ההון</a>
@@ -40,27 +46,37 @@
 </nav>
 
 <main class="main">
-<div style="font-size:12px;color:var(--muted);margin-bottom:0.5rem">הטבות וזכויות</div>
+<div style="font-size:0.75rem;color:var(--muted);margin-bottom:0.5rem">הטבות וזכויות</div>
 <h1>בנק אוצר החייל</h1>
-<p class="page-subtitle">מתנת הצטרפות של 3,400 ש"ח</p>
+<p class="page-subtitle">שווה לפתוח חשבון</p>
 
 
-<p>יש לי חוויה חיובית מהבנק — שירות לקוחות בצ'אט ממש סבבה. אבל הסיבה האמיתית לעבור היא מתנת ההצטרפות.</p>
+<div class="callout">
+  המספרים כאן נכונים לזמן הכתיבה - כדאי לבדוק <a href="https://www.bankotsar.co.il/private/account/armedforces/heveraccount/benefitshever/#section_8b6b04bb-5e05-48f2-bf26-ed7360641230" target="_blank">באתר הבנק</a> שהתנאים לא השתנו.
+</div>
 
-<h2>מתנת הצטרפות — בחרו אחת</h2>
-<table>
-  <tr><th>אפשרות</th><th>פרטים</th></tr>
-  <tr><td>מזומן</td><td>1,700 ש"ח אחרי משכורת ראשונה + 1,700 ש"ח נוספים לאחר שנה</td></tr>
-  <tr><td>הלוואה ללא ריבית</td><td>30,000 ש"ח ל-30 חודשים (1,000 ש"ח בחודש)</td></tr>
-</table>
+<p>יש לי חוויה חיובית מהבנק - שירות לקוחות בצ'אט ממש סבבה. אבל הסיבה האמיתית לעבור היא מתנת ההצטרפות.</p>
+
+<h2>מתנת הצטרפות</h2>
+<p>1,700 ש"ח עם העברת משכורת ראשונה, ועוד 1,700 ש"ח בשנה השניה - סה"כ 3,400 ש"ח.</p>
+
+<h3>אפשרות נוספת במקום ה-1,700 ש"ח בשנה השניה</h3>
+<ul>
+  <li>הלוואה של 30,000 ש"ח ללא ריבית או הצמדה למשך 30 חודשים (כל חודש מחזירים 1,000 ש"ח).</li>
+</ul>
 
 <h2>חבר מביא חבר</h2>
-<p>500 ש"ח referral — חברים בדרך כלל ישמחו להתחלק חצי-חצי.</p>
+<p>500 ש"ח referral - אני בטוח שתמצאו חברים שישמחו להתחלק חצי-חצי.</p>
 
-<div class="callout">שווה להיות ערניים להטבות זמניות — במלחמת 12 הימים הייתה הלוואה של 12,000 ש"ח ללא ריבית לשנה. כסף עכשיו תמיד שווה יותר מכסף אחר כך.</div>
+<p><strong>כלומר בשורה התחתונה: יש פה 3,650 ש"ח בחינם!</strong></p>
+
+<h2>הטבות זמניות</h2>
+<p>שווה להיות ערניים להטבות זמניות - במלחמת 12 הימים הייתה הטבה של אוצר החייל לאנשי הקבע של 12,000 ש"ח ללא ריבית לשנה. כסף עכשיו תמיד שווה יותר מכסף אחר כך כי אינפלציה :)</p>
 
 <div class="bottom-nav"><a href="tipim.html">← טיפים כלליים</a><a href="halat.html">חל"ת →</a></div>
 </main>
 </div>
+<div class="tip-sheet"><div class="tip-sheet-content"></div></div>
+<script src="app.js"></script>
 </body>
 </html>

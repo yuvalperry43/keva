@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>חשבון בנק — כלכלה בקבע</title>
+<title>חשבון בנק - כלכלה בקבע</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="mobile-header">
+<button class="menu-toggle" aria-label="תפריט"><svg class="menu-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><rect x="2" y="4" width="16" height="2" rx="1"/><rect x="2" y="9" width="16" height="2" rx="1"/><rect x="2" y="14" width="16" height="2" rx="1"/></svg></button>
+<span class="site-name">כלכלה בקבע</span>
+<div class="font-controls"><button class="font-btn" id="font-down">&minus;</button><button class="font-btn" id="font-up">+</button></div>
+</header>
 <div class="layout">
 <nav class="sidebar">
 <div class="sidebar-logo"><a href="index.html">כלכלה בקבע<span>המדריך לחייל הקבע</span></a></div>
@@ -17,6 +22,7 @@
 <a class="nav-item" href="talush-sachar.html">תלוש שכר</a>
 <a class="nav-item active" href="heshbon-bank.html">חשבון בנק</a>
 <a class="nav-item nav-sub" href="keren-kaspit.html">קרן כספית</a>
+<a class="nav-item nav-sub" href="bank-otzar.html">בנק אוצר החייל</a>
 </div>
 <div class="nav-section"><div class="nav-section-title">השקעות וחיסכון</div>
 <a class="nav-item" href="shuk-haon.html">שוק ההון</a>
@@ -31,7 +37,6 @@
 <a class="nav-item" href="nekudot.html">נקודות</a>
 <a class="nav-item" href="cellcom.html">סלקום</a>
 <a class="nav-item" href="halat.html">חל"ת</a>
-<a class="nav-item" href="bank-otzar.html">בנק אוצר החייל</a>
 </div>
 <div class="nav-section"><div class="nav-section-title">בונוס</div>
 <a class="nav-item" href="tipim.html">טיפים כלליים</a>
@@ -40,13 +45,15 @@
 </nav>
 
 <main class="main">
-<div style="font-size:12px;color:var(--muted);margin-bottom:0.5rem">הכסף היומיומי</div>
+<div style="font-size:0.75rem;color:var(--muted);margin-bottom:0.5rem">הכסף היומיומי</div>
 <h1>חשבון בנק</h1>
 <p class="page-subtitle">עו"ש, השקעות וקרן ביטחון</p>
 <span class="wip">🚧 בבנייה</span>
-<span class="wip">🚧 בבנייה — יתווסף בקרוב</span><p>הדף הזה עוד בכתיבה.</p>
+<span class="wip">🚧 בבנייה - יתווסף בקרוב</span><p>הדף הזה עוד בכתיבה.</p>
 <div class="bottom-nav"><a href="keren-kaspit.html">← קרן כספית</a><a href="talush-sachar.html">תלוש שכר →</a></div>
 </main>
 </div>
+<div class="tip-sheet"><div class="tip-sheet-content"></div></div>
+<script src="app.js"></script>
 </body>
 </html>

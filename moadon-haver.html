@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>מועדון חבר — כלכלה בקבע</title>
+<title>מועדון חבר - כלכלה בקבע</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Hebrew:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="mobile-header">
+<button class="menu-toggle" aria-label="תפריט"><svg class="menu-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><rect x="2" y="4" width="16" height="2" rx="1"/><rect x="2" y="9" width="16" height="2" rx="1"/><rect x="2" y="14" width="16" height="2" rx="1"/></svg></button>
+<span class="site-name">כלכלה בקבע</span>
+<div class="font-controls"><button class="font-btn" id="font-down">&minus;</button><button class="font-btn" id="font-up">+</button></div>
+</header>
 <div class="layout">
 <nav class="sidebar">
 <div class="sidebar-logo"><a href="index.html">כלכלה בקבע<span>המדריך לחייל הקבע</span></a></div>
@@ -17,6 +22,7 @@
 <a class="nav-item" href="talush-sachar.html">תלוש שכר</a>
 <a class="nav-item" href="heshbon-bank.html">חשבון בנק</a>
 <a class="nav-item nav-sub" href="keren-kaspit.html">קרן כספית</a>
+<a class="nav-item nav-sub" href="bank-otzar.html">בנק אוצר החייל</a>
 </div>
 <div class="nav-section"><div class="nav-section-title">השקעות וחיסכון</div>
 <a class="nav-item" href="shuk-haon.html">שוק ההון</a>
@@ -31,7 +37,6 @@
 <a class="nav-item" href="nekudot.html">נקודות</a>
 <a class="nav-item" href="cellcom.html">סלקום</a>
 <a class="nav-item" href="halat.html">חל"ת</a>
-<a class="nav-item" href="bank-otzar.html">בנק אוצר החייל</a>
 </div>
 <div class="nav-section"><div class="nav-section-title">בונוס</div>
 <a class="nav-item" href="tipim.html">טיפים כלליים</a>
@@ -40,29 +45,36 @@
 </nav>
 
 <main class="main">
-<div style="font-size:12px;color:var(--muted);margin-bottom:0.5rem">הטבות וזכויות</div>
+<div style="font-size:0.75rem;color:var(--muted);margin-bottom:0.5rem">הטבות וזכויות</div>
 <h1>מועדון חבר</h1>
 <p class="page-subtitle">המועדון המשתלם במדינה</p>
 
 
-<p>בגדול — המועדון המשתלם במדינה. ואתם חברים בו אוטומטית.</p>
+<p>בגדול - המועדון המשתלם במדינה. ואתם חברים בו אוטומטית.</p>
 
 <h2>הרשמה ראשונית</h2>
-<p>עלולה לקחת זמן — מי שנכנס לקבע אחרי ה-20 לחודש יכול להיכנס למערכת רק ב-4 לחודש שאחרי.</p>
+<p>עלולה לקחת זמן - כשאני נרשמתי, מי שנכנס לקבע אחרי ה-20 לחודש יכול להיכנס למערכת רק ב-4 לחודש שאחרי.</p>
 
 <h2>כרטיסי אשראי</h2>
-<p>מגיעים לכם שני כרטיסים חינמיים ובלי עמלות — מאסטרקארד ואמריקן אקספרס. מסגרת של 3,000 ש"ח, ניתן להגדיל מהאפליקציה (הגדלתי ל-15,000 בלי בעיה).</p>
-<div class="callout">5% הנחה במעמד החיוב בהרבה מקומות עם המאסטרקארד. לא נקודות — הנחה ישירה.</div>
+<p>מגיעים לכם שני כרטיסים חינמיים ובלי עמלות - מאסטרקארד (ה"שחור") ואמריקן אקספרס. מסגרת של 3,000 ש"ח, ניתן להגדיל מהאפליקציה (הגדלתי ל-15,000 בלי בעיה). <button class="info-tip" data-tip="באפליקציית ישראכרט ← לחיצה על הכרטיס הרלוונטי ← פעולות בכרטיס ← הגדלת מסגרת">i</button></p>
+<p>לשני הכרטיסים יש מועדוני הנחות של ישראכרט ואמריקן אקספרס - אישית לא יצא לי להשתמש בהם.</p>
+<div class="callout">בין 5% ל-10% הנחה במעמד החיוב בהרבה מקומות עם השחור.</div>
 
 <h2>כרטיסים נטענים</h2>
-<p>מומלץ להזמין מוקדם — לוקח זמן להגיע. הנתונים מתעדכנים ב-12 לחודש.</p>
-<p>עדיף לטעון בחודשי בונוס: 35% בחודש רגיל, 42% ביום הולדת.</p>
+<p>מומלץ להזמין ישר כשאפשר - לוקח להם קצת זמן להגיע.</p>
+
+<p>כרטיס הניתן לטעינה חוזרת עד 3,000 ש"ח, עם הנחה משתנה לפי סכום הטעינה:</p>
+<ul>
+  <li>1,000 ש"ח ראשונים - 30% (35% בחגים, 42% ביום הולדת)</li>
+  <li>1,000 ש"ח שניים - 25% הנחה</li>
+  <li>1,000 ש"ח נוספים - 20% הנחה</li>
+</ul>
 
 <h2>מתנות ותגמולים</h2>
 <ul>
-  <li><strong>שי הרמטכ"ל</strong> — 300–600 ש"ח לטעינה, כ-3 פעמים בשנה</li>
-  <li><strong>זמן חבר</strong> — 300 ש"ח עזריאלי פעם בשנה</li>
-  <li><strong>הסכם חבר</strong> — דמי ניהול מופחתים בקופות גמל</li>
+  <li><strong>שי הרמטכ"ל</strong> - 300–600 ש"ח לטעינה לאחד הכרטיסים, כ-3 פעמים בשנה</li>
+  <li><strong>זמן חבר</strong> - 300 ש"ח עזריאלי פעם בשנה</li>
+  <li><strong>הסכם חבר</strong> - דמי ניהול מופחתים בקופות גמל</li>
 </ul>
 
 <h2>קבוצות ווטסאפ</h2>
@@ -74,5 +86,7 @@
 <div class="bottom-nav"><a href="nekudot.html">← נקודות</a><a href="bituah-haim.html">למה ביטלתי את ביטוח החיים →</a></div>
 </main>
 </div>
+<div class="tip-sheet"><div class="tip-sheet-content"></div></div>
+<script src="app.js"></script>
 </body>
 </html>
