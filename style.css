@@ -547,6 +547,40 @@ hr {
   text-decoration: line-through;
 }
 
+/* Expandable section */
+.expandable {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+}
+.expandable summary {
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  user-select: none;
+}
+.expandable summary::-webkit-details-marker { display: none; }
+.expandable summary:hover { background: var(--surface); }
+.expandable-arrow {
+  display: inline-block;
+  transition: transform 0.2s;
+  color: var(--muted);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  transform: rotate(270deg);
+}
+.expandable[open] .expandable-arrow { transform: rotate(90deg); }
+.expandable-body {
+  padding: 0 1rem 1rem 1rem;
+  border-top: 1px solid var(--border);
+}
+
 /* Contact details/form */
 .contact-details {
   text-align: right;

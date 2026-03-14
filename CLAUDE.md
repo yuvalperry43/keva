@@ -34,6 +34,10 @@ Then open `http://localhost:8000` in a browser.
 
 **JS:** Only one interaction — mobile sidebar toggle: `document.body.classList.toggle('sidebar-open')`
 
+## Writing Style
+
+- Never use em dashes (—) in content. Use a regular hyphen (-) or restructure the sentence instead.
+
 ## Content Pages
 
 All pages live in the root directory. Pages marked with 🚧 "בבנייה" are incomplete stubs. When adding new pages, follow the same HTML structure as existing complete pages (e.g., `heshbon-bank.html`, `shuk-haon.html`) and update the sidebar nav in **all** other pages.
