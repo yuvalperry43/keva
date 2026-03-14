@@ -648,7 +648,7 @@ hr {
   display: none;
   position: fixed;
   inset: 0;
-  z-index: 600;
+  z-index: calc(var(--sidebar-z) + 1);
   background: rgba(0,0,0,0.4);
   align-items: flex-end;
 }

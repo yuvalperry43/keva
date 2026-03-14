@@ -57,7 +57,7 @@ if (sidebarLogo) {
   sidebarThemeBtn.addEventListener('click', function() {
     var isDark = document.documentElement.classList.toggle('dark');
     localStorage.setItem('darkMode', isDark ? '1' : '0');
-    updateThemeBtn();
+    updateDarkToggle();
     sidebarThemeBtn.innerHTML = document.documentElement.classList.contains('dark') ? sunIcon() : moonIcon();
   });
   sidebarThemeBtn.innerHTML = document.documentElement.classList.contains('dark') ? sunIcon() : moonIcon();
