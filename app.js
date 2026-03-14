@@ -1,6 +1,8 @@
 // Settings popover (theme + font size)
-var savedDark = localStorage.getItem('darkMode') === '1';
-document.documentElement.classList.toggle('dark', savedDark);
+var savedDark = localStorage.getItem('darkMode');
+var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+var isDarkMode = savedDark !== null ? savedDark === '1' : prefersDark;
+document.documentElement.classList.toggle('dark', isDarkMode);
 
 function sunIcon() { return '<svg width="16" height="16" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10" cy="10" r="4"/><line x1="10" y1="2" x2="10" y2="0"/><line x1="10" y1="18" x2="10" y2="20"/><line x1="2" y1="10" x2="0" y2="10"/><line x1="18" y1="10" x2="20" y2="10"/><line x1="4.2" y1="4.2" x2="2.8" y2="2.8"/><line x1="15.8" y1="15.8" x2="17.2" y2="17.2"/><line x1="15.8" y1="4.2" x2="17.2" y2="2.8"/><line x1="4.2" y1="15.8" x2="2.8" y2="17.2"/></svg>'; }
 function moonIcon() { return '<svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>'; }
